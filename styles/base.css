@@ -1,3 +1,13 @@
+/* This file sets all base styling for elements. */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
 body {
     margin: 0px;
 }
