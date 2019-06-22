@@ -36,7 +36,6 @@
 
 /* Desktop > 768px */
 @media only screen and (min-width: 768px) {
-    /* Greater than small phone screens */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -51,12 +50,13 @@
     .col-12 {width: 100%;}
 }
 
+.container {
+    margin: 0px 10%;
+}
 
-/* Header */
 .header {
     background-color: #222831;
-    color: #00adb5;
-    padding: 5px;
+    padding: 15px 5px;
     position: -webkit-sticky; 
     position: sticky;
     top: 0;
@@ -65,7 +65,98 @@
 .brand {
     display: inline;
     padding: 15px 15px;
+    color: #00adb5;
 }
+
+/* Navbar classes */
+
+/* Collapsable navbar on mobiles */
+.nav-collapse {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    padding: 15px 15px;
+    font-size: 20pt;
+    color: #ffffff;
+}
+
+.nav-items {
+    display: none;
+    overflow-y: hidden;
+    max-height: 0px;
+    -webkit-transition: all 1.5s cubic-bezier(0, 1, 0.5, 1);
+    transition: all 1.5s cubic-bezier(0, 1, 0.5, 1);
+}
+.nav-items.nav-responsive {
+    max-height: 200px;
+}
+
+.nav-items.nav-responsive {
+    position: relative;
+    display: block;
+}
+.nav-items.nav-responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 5px;
+    overflow: hidden;
+}
+
+.nav li {
+    max-width: 60px;
+    padding: 10px;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #393e46;
+}
+
+.nav li a.active {
+    color: #00adb5;
+}
+
+/* Desktop > 768px */
+@media screen and (min-width: 768px) {
+    .nav-collapse {
+        display: none;
+    }
+    .nav {
+        display: inline;
+    }
+    .nav ul {
+        display: inline;
+    }
+    .nav li {
+        display: inline;
+        padding: 5px;
+    }
+    .nav-items.nav-responsive {
+        position: inherit;
+        display: inline;
+    }
+    .nav-items.nav-responsive li {
+        float: inherit;
+        display: inherit;
+        text-align: inherit;
+    }
+}
+
+
+
+/* END NAVBAR CLASSES */
 
 .footer {
     background-color: #393e46;

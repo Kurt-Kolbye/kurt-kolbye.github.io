@@ -1,9 +1,19 @@
-// $(document).ready(function() {
+// TODO: If screen width is greater than 768px, add
+// functionality to remove "nav-responsive"
 
-//     var viewModel = {
-        
-//     };
+
+$(document).ready(function() {
+
+    function ViewModel() {
+        var self = this;
+
+        self.toggleNav = function() {
+            var navItems = document.getElementById("nav-items");
+            
+            navItems.classList.toggle("nav-responsive");
+        }
+    };
     
-//     ko.applyBindings(viewModel);
-// });
+    ko.applyBindings(new ViewModel);
+});
 

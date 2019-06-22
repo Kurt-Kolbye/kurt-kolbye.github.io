@@ -2,32 +2,6 @@
 
 /* Navigation bar */
 
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 15px 5px;
-    overflow: hidden;
-}
-
-.nav li {
-    display: inline;
-    max-width: 60px;
-    padding: 5px;
-}
-
-.nav li a {
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-}
-
-.nav li a:hover {
-    background-color: #393e46;
-}
-.nav li a.active {
-    color: #00adb5;
-}
 
 
 /* Example content */
@@ -47,4 +21,9 @@
 
 .menu li:hover {
     background-color: #0099cc;
+}
+
+.highlight {
+    color: #00adb5;
+    font-weight: bold;
 }
