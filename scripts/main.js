@@ -1,16 +1,21 @@
-// TODO: If screen width is greater than 768px, add
-// functionality to remove "nav-responsive"
-
-
 $(document).ready(function() {
 
     function ViewModel() {
         var self = this;
 
+        // Small screen open/close of navigation bar
         self.toggleNav = function() {
-            var navItems = document.getElementById("nav-items");
+            var navItems = $("#nav-items");
             
-            navItems.classList.toggle("nav-responsive");
+            if (navItems.is(":visible")) {
+                navItems.slideUp(function() {
+                    // Catch and remove display: none in case a user resizes above a small screen
+                    navItems.css('display', '');
+                });
+            }
+            else {
+                navItems.slideDown();
+            }
         }
     };
     

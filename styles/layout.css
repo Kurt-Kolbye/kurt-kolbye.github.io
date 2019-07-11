@@ -82,30 +82,12 @@
 
 .nav-items {
     display: none;
-    overflow-y: hidden;
-    max-height: 0px;
-    -webkit-transition: all 1.5s cubic-bezier(0, 1, 0.5, 1);
-    transition: all 1.5s cubic-bezier(0, 1, 0.5, 1);
-}
-.nav-items.nav-responsive {
-    max-height: 200px;
-}
-
-.nav-items.nav-responsive {
-    position: relative;
-    display: block;
-}
-.nav-items.nav-responsive li {
-    float: none;
-    display: block;
-    text-align: left;
 }
 
 .nav ul {
     list-style-type: none;
     margin: 0;
     padding: 15px 5px;
-    overflow: hidden;
 }
 
 .nav li {
@@ -143,18 +125,10 @@
         display: inline;
         padding: 5px;
     }
-    .nav-items.nav-responsive {
-        position: inherit;
+    .nav-items {
         display: inline;
     }
-    .nav-items.nav-responsive li {
-        float: inherit;
-        display: inherit;
-        text-align: inherit;
-    }
 }
-
-
 
 /* END NAVBAR CLASSES */
 
