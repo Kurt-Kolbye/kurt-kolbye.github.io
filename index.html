@@ -9,6 +9,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/layout.css">
+  <link rel="stylesheet" type="text/css" href="styles/module.css">
   <link rel="stylesheet" type="text/css" href="styles/fontawesome/css/all.min.css">
 
   <!-- Scripts -->
@@ -18,7 +20,71 @@
 </head>
 
 <body>
-  <p>Hello World!</p>
-  <span class="fas fa-user"></span>
+  <!-- Header -->
+  <div class="header">
+    <h1 class="brand">Kolbye, Kurt</h1>
+    <div class="nav">
+      <ul id="nav-items" class="nav-items">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- Collapse Menu for Mobiles -->
+      <div class="nav-collapse" data-bind="click: toggleNav">
+          <span class="fa fa-bars"></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <p>
+        I'm <span class="highlight">Kurt Kolbye</span>, a full-stack web developer. 
+        Feel free to navigate my site including a few projects I've completed.
+      </p>
+    </div>
+  </div>
+  
+
+ <!-- **START EXAMPLE CONTENT** -->
+  <!-- Row -->
+  <!-- <div class="row"> -->
+
+    <!-- Left Side -->
+    <!-- <div class="col-3 col-s-3 menu">
+      <ul>
+        <li>The Flight</li>
+        <li>The City</li>
+        <li>The Island</li>
+        <li>The Food</li>
+      </ul>
+    </div> -->
+    <!-- Body -->
+    <!-- <div class="col-6 col-s-9">
+        <h1>The City</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+    </div> -->
+
+    <!-- Right Side -->
+    <!-- <div class="col-3 col-s-12">
+        <div class="aside">
+          <h2>What?</h2>
+          <p>Chania is a city on the island of Crete.</p>
+          <h2>Where?</h2>
+          <p>Crete is a Greek island in the Mediterranean Sea.</p>
+          <h2>How?</h2>
+          <p>You can reach Chania airport from all over Europe.</p>
+        </div>
+      </div>
+  </div> -->
+
+   <!-- **END EXAMPLE CONTENT** -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>KURT KOLBYE - 2019</p>
+  </div>
 </body>
 </html>
