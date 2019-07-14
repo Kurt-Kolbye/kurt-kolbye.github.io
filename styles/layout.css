@@ -106,7 +106,7 @@
     background-color: #393e46;
 }
 
-.nav li a.active {
+.nav li a.nav-active {
     color: #00adb5;
 }
 

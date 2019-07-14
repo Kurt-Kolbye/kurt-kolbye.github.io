@@ -25,10 +25,10 @@
     <h1 class="brand">Kolbye, Kurt</h1>
     <div class="nav">
       <ul id="nav-items" class="nav-items">
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a id="nav-home" href="#" data-bind="click: function() { changeView('Home'); }" class="nav-active">Home</a></li>
+        <li><a id="nav-about" href="#" data-bind="click: function() { changeView('About'); }">About</a></li>
+        <li><a id="nav-projects" href="#" data-bind="click: function() { changeView('Projects'); }">Projects</a></li>
+        <li><a id="nav-contact" href="#" data-bind="click: function() { changeView('Contact'); }">Contact</a></li>
       </ul>
       <!-- Collapse Menu for Mobiles -->
       <div class="nav-collapse" data-bind="click: toggleNav">
@@ -39,13 +39,48 @@
   
   <div class="container">
     <div class="row">
-      <p>
-        I'm <span class="highlight">Kurt Kolbye</span>, a full-stack web developer. 
-        Feel free to navigate my site including a few projects I've completed.
-      </p>
+      <!-- Show different views based on navigation -->
+      <div data-bind="visible: templateView() == 'Home', template: {name: 'home'}"></div>
+      <div data-bind="visible: templateView() == 'About', template: {name: 'about'}"></div>
+      <div data-bind="visible: templateView() == 'Projects', template: {name: 'projects'}"></div>
+      <div data-bind="visible: templateView() == 'Contact', template: {name: 'contact'}"></div>
     </div>
   </div>
   
+  <!-- Home Template-->
+  <script type="text/html" id="home">
+    <p>
+      I'm <span class="highlight">Kurt Kolbye</span>, a junior full-stack web developer. 
+      <br/>
+      <br/>
+      This is my portfolio website, a mobile responsive, Single Page Application utilizing HTML, CSS, JavaScript,
+      and <a href="https://knockoutjs.com/" target="_blank">Knockout.js</a>.
+      <br/>
+      <br/>
+      Feel free to navigate my site including some of the projects I've completed.
+    </p>
+  </script>
+
+  <!-- About Template -->
+  <script type="text/html" id="about">
+    <p>
+      This will be the About page.
+    </p>
+  </script>
+
+  <!-- Projects Template -->
+  <script type="text/html" id="projects">
+    <p>
+      This will be the Projects page.
+    </p>
+  </script>
+
+  <!-- Contact Template -->
+  <script type="text/html" id="contact">
+    <p>
+      This will be the Contact page.
+    </p>
+  </script>
 
  <!-- **START EXAMPLE CONTENT** -->
   <!-- Row -->
