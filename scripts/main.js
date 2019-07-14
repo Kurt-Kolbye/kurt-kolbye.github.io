@@ -32,7 +32,7 @@ $(document).ready(function() {
                 default:
                     break;
             }
-        }
+        };
 
         // Small screen open/close of navigation bar
         self.toggleNav = function() {
